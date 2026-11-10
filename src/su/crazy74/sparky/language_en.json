@@ -1,0 +1,136 @@
+{
+  "menu": {
+    "new_chat": "Chat with Sparky",
+    "project_map": "Project map",
+    "backup": "Create sparky backup",
+    "options": "Settings"
+  },
+  "plugin": {
+    "version": "0.0.0",
+    "name": "Sparky",
+    "note": "AI assistant, a girl who is modest but determined"
+  },
+  "notify": {
+    "tray_title": "Sparky",
+    "chat_error": "Execution error",
+    "chat_done": "Reply is ready"
+  },
+  "date": {
+    "now": "now",
+    "today": "today",
+    "yesterday": "yesterday",
+    "before_yesterday": "the day before yesterday",
+    "tomorrow": "tomorrow",
+    "aftertomorrow": "the day after tomorrow",
+    "neverdate": "never",
+    "just_now": "just now",
+    "ago": "ago",
+    "locale_format": "j.m.Y",
+    "locale_format_with_time": "j.m.Y H:i",
+    "locale_format_short": "j.m.y",
+    "locale_format_short_with_time": "j.m.y H:i",
+    "monthsformat": [
+      "January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"
+    ],
+    "units": {
+      "second": ["second", "seconds", "seconds"],
+      "minute": ["minute", "minutes", "minutes"],
+      "hour": ["hour", "hours", "hours"],
+      "day": ["day", "days", "days"]
+    },
+    "days_short": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+  },
+  "monthsformat": [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ],
+  "numbers": {
+    "postfix": {
+      "kilo": "K",
+      "mega": "M",
+      "giga": "B"
+    },
+    "units": {
+      "pcs": ["piece", "pieces", "pieces"]
+    }
+  },
+  "chat": {
+    "query-text": "Type here",
+    "user-interrupted": "Interrupted by user",
+    "button": {
+      "send": "Send",
+      "stop": "Stop",
+      "retry": "Retry",
+      "copy": "Copy to clipboard",
+      "apply-edit": "Apply edit",
+      "open-file": "Open file",
+      "roll-down": "Expand",
+      "roll-up": "Collapse"
+    }
+  },
+  "mindmap": {
+    "button": {
+      "btn_ok": "Ok",
+      "btn_cancel": "Cancel",
+      "btn_close": "Close",
+      "save_map": "Save",
+      "remove_node": "Delete",
+      "open": "Open",
+      "remove": "Delete",
+      "add_node": "Add",
+      "inspector_apply": "Apply",
+      "inspector_cancel": "Cancel",
+      "inspector_note": "Note text",
+      "inspector_fields": "Data fields",
+      "inspector_toggle_full": "Detailed",
+      "inspector_toggle_short": "Brief",
+      "inspector_edit_date": "Date (time)",
+      "inspector_add_link": "Add link",
+      "inspector_add_url": "Add URL",
+      "inspector_add_file": "Add file link",
+      "inspector_add_folder": "Add folder link",
+      "inspector_add_custom": "Custom field"
+    },
+    "dataedit": {
+      "tabs": {
+        "fields": "Data",
+        "links": "Links",
+        "files": "Files",
+        "note": "Notes"
+      },
+      "enter_url": "Enter URL:",
+      "add_date": "Set date",
+      "add_datetime": "Set date and time",
+      "add_date_start_end": "Set start and end",
+      "add_string": "Custom text field",
+      "field_name": "Field name",
+      "field_value": "Value",
+      "field_date": "Date",
+      "field_datetime": "Date and time",
+      "field_date_start": "Start date",
+      "field_date_end": "End date",
+      "remove_dialog": "Remove link",
+      "remove_link_confirm": "Are you sure you want to remove this link?",
+      "reserved_field_name": "This field name is reserved"
+    },
+    "default_node_text": "New node",
+    "note_icon_caption": "Note",
+    "modal_alert_title": "Notification",
+    "modal_prompt_title": "Data input",
+    "modal_confirm_title": "Confirmation",
+    "remove_node_confirm": "Are you sure you want to delete this node?",
+    "prompt_title": "Node title:",
+    "prompt_type": "Node type:",
+    "type_default": "Default",
+    "type_group": "Group",
+    "type_module": "Module",
+    "type_task": "Task",
+    "type_milestone": "Milestone / Event",
+    "type_idea": "Idea",
+    "type_note": "Note",
+    "type_document": "Document",
+    "kanban_unselect": "not selected"
+  }
+}

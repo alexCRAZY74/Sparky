@@ -1,0 +1,136 @@
+{
+  "menu": {
+    "new_chat": "Чат с Искрой",
+    "project_map": "Карта проекта",
+    "backup": "Создать sparky-бэкап",
+    "options": "Настройки"
+  },
+	"plugin":{
+		"version": "0.0.0",
+		"name": "Искра",
+		"note": "(Sparky) ИИ-ассистент, девушка скромная, но решительная"
+	},
+  "notify": {
+    "tray_title": "Искра (Sparky)",
+    "chat_error": "Ошибка выполнения",
+    "chat_done": "Ответ готов"
+  },
+	"date": {
+		"now": "сейчас",
+		"today": "сегодня",
+		"yesterday": "вчера",
+		"before_yesterday": "позавчера",
+		"tomorrow": "завтра",
+		"aftertomorrow": "послезавтра",
+		"neverdate": "никогда",
+		"just_now": "только что",
+		"ago": "назад",
+		"locale_format": "j.m.Y",
+		"locale_format_with_time": "j.m.Y H:i",
+		"locale_format_short": "j.m.y",
+		"locale_format_short_with_time": "j.m.y H:i",
+		"monthsformat": [
+			"января", "февраля", "марта", "апреля", "мая", "июня",
+			"июля", "августа", "сентября", "октября", "ноября", "декабря"
+		],
+		"units": {
+			"second": ["секунду", "секунды", "секунд"],
+			"minute": ["минуту", "минуты", "минут"],
+			"hour": ["час", "часа", "часов"],
+			"day": ["день", "дня", "дней"]
+		},
+		"days_short": ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
+		"months": ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
+	},
+	"monthsformat": [
+		"января", "февраля", "марта", "апреля", "мая", "июня",
+		"июля", "августа", "сентября", "октября", "ноября", "декабря"
+	],
+	"numbers": {
+		"postfix": {
+			"kilo": "тыс.",
+			"mega": "млн",
+			"giga": "млрд"
+		},
+		"units": {
+			"pcs": ["штука", "штуки", "штук"]
+		}
+	},
+	"chat": {
+		"query-text": "Писать сюда",
+		"user-interrupted": "Прервано пользователем",
+		"button": {
+			"send": "Отправить",
+			"stop": "Прервать",
+			"retry": "Повторить",
+			"copy": "Копировать в буфер",
+			"apply-edit": "Применить правку",
+			"open-file": "Открыть файл",
+			"roll-down": "Развернуть",
+			"roll-up": "Свернуть"
+		}
+	},
+	"mindmap": {
+		"button": {
+			"btn_ok": "Ok",
+			"btn_cancel": "Отмена",
+			"btn_close": "Закрыть",
+			"save_map": "Сохранить",
+			"remove_node": "Удалить",
+			"open": "Открыть",
+			"remove": "Удалить",
+			"add_node": "Добавить",
+			"inspector_apply": "Применить",
+			"inspector_cancel": "Отменить",
+			"inspector_note": "Текст заметки",
+			"inspector_fields": "Поля данных",
+			"inspector_toggle_full": "Подробно",
+			"inspector_toggle_short": "Кратко",
+			"inspector_edit_date": "Дата (время)",
+			"inspector_add_link": "Добавить связь",
+			"inspector_add_url": "Добавить URL",
+			"inspector_add_file": "Добавить ссылку на файл",
+			"inspector_add_folder": "Добавить ссылку на папку",
+			"inspector_add_custom": "Произвольное поле"
+		},
+		"dataedit": {
+			"tabs": {
+				"fields": "Данные",
+				"links": "Ссылки",
+				"files": "Файлы",
+				"note": "Заметки"
+			},
+			"enter_url": "Введите URL:",
+			"add_date": "Указать дату",
+			"add_datetime": "Указать дату и время",
+			"add_date_start_end": "Указать начало и конец",
+			"add_string": "Произвольное текстовое поле",
+			"field_name": "Имя поля",
+			"field_value": "Значение",
+			"field_date": "Дата",
+			"field_datetime": "Дата и время",
+			"field_date_start": "Дата начала",
+			"field_date_end": "Дата окончания",
+			"remove_dialog": "Удаление связи",
+			"remove_link_confirm": "Действительно хотите удалить ссылку?",
+			"reserved_field_name": "Имя поля зарезервировано"
+		},
+    "default_node_text": "Новый узел",
+		"note_icon_caption": "Заметка",
+		"modal_alert_title": "Уведомление",
+		"modal_prompt_title": "Ввод данных",
+		"modal_confirm_title": "Подтверждение",
+		"remove_node_confirm": "Действительно хотите удалить узел?",
+		"prompt_title": "Название узла:",
+		"prompt_type": "Тип узла:",
+		"type_default": "Стандартный",
+		"type_group": "Группа",
+		"type_module": "Модуль",
+		"type_task": "Задача",
+		"type_milestone": "Веха / Событие",
+		"type_idea": "Идея",
+		"type_note": "Заметка",
+		"type_document": "Документ",
+		"kanban_unselect": "не выбрано"
+	}
+}

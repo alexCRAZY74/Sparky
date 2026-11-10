@@ -1,0 +1,1123 @@
+@charset "UTF-8";
+/* основные стили */
+/* основные стили */
+@import url(metro-icons.css);
+@import url(fonts/glyphicon.css);
+@import url(fonts/font-awesome.css);
+@import url(fonts/elusive-icons.css);
+@import url(fonts/roboto.css);
+@import url(fonts/googlesans.css);
+@import url(fonts/victormono.css);
+/* --- Системные переменные из :root NetBeans --- */
+/* UI Colors (Панели, кнопки, скроллы) */
+/* Цвет выделения в списках/меню/кнопках */
+/* Editor Colors (Основа редактора кода) */
+/* Цвет выделения текста в редакторе */
+/* Syntax Highlighting (Подсветка синтаксиса для вывода кода/логов) */
+/* Классы, интерфейсы, типы */
+/* Размеры шрифтов */
+/* --- Настройки шрифтов (Твои кастомные привязки) --- */
+/* --- Служебные ресурсы и отступы --- */
+/* --- Базовые селекторы --- */
+html, body {
+  background-color: var(--nb-ui-bg);
+  color: var(--nb-ui-fg);
+  font-family: "Roboto", sans-serif;
+  font-size: var(--nb-ui-font-size);
+  line-height: 1.3em;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%; }
+
+.loading {
+  position: relative; }
+  .loading:before {
+    z-index: 10000;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(loading.gif);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-color: rgba(255, 255, 255, 0.9); }
+
+/* --- Кастомные скроллбары в стиле темы NetBeans --- */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px; }
+
+::-webkit-scrollbar-track {
+  background: var(--nb-ui-bg); }
+
+::-webkit-scrollbar-thumb {
+  background: var(--nb-ui-border);
+  border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--nb-ui-active); }
+
+::-webkit-scrollbar-corner {
+  background: transparent; }
+
+/* Базовый класс для иконок меню */
+.csl74-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  background-color: currentColor;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain; }
+
+/* Ссылка / URL */
+.csl74-icon-link {
+  mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>');
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>'); }
+
+/* Файл */
+.csl74-icon-file {
+  mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>');
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>'); }
+
+/* Просмотр */
+.csl74-icon-eye {
+  mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>');
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>'); }
+
+/* Удаление */
+.csl74-icon-trash {
+  mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>');
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>'); }
+
+/* Дата и время */
+.csl74-icon-datetime {
+  mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><circle cx="16.5" cy="16.5" r="4.5"/><polyline points="16.5 14.5 16.5 16.5 18 16.5"/></svg>');
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><circle cx="16.5" cy="16.5" r="4.5"/><polyline points="16.5 14.5 16.5 16.5 18 16.5"/></svg>'); }
+
+/* Просто дата (Календарь) */
+.csl74-icon-date, .csl74-icon.icon-date {
+  mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>');
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>'); }
+
+/* Просто время (Часы) */
+.csl74-icon-time {
+  mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>');
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>'); }
+
+/* флекс */
+.flex-row {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem; }
+  .flex-row.debug {
+    outline: 1px solid magenta; }
+    .flex-row.debug > * {
+      outline: 1px solid blue; }
+  .flex-row.wrap {
+    flex-wrap: wrap; }
+  .flex-row.stretch {
+    justify-content: stretch;
+    align-items: stretch; }
+    .flex-row.stretch > * {
+      flex-grow: 1; }
+  .flex-row.cols2 {
+    position: relative;
+    gap: 2%; }
+    .flex-row.cols2 > * {
+      width: 49%;
+      flex-grow: 0.1; }
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch; }
+  .flex-column > *:not(:first-child) {
+    margin-top: 6px; }
+
+/* --- панели инструентов --- */
+.mindmanager-layout .mm-toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-self: flex-start;
+  gap: 0.4em; }
+  .mindmanager-layout .mm-toolbar .mm-toolbar-spacer {
+    width: 0.4em; }
+  .mindmanager-layout .mm-toolbar button {
+    padding: 0.4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4em;
+    cursor: pointer; }
+    .mindmanager-layout .mm-toolbar button .icon {
+      font-size: 1.5em; }
+    .mindmanager-layout .mm-toolbar button .label {
+      font-size: 0.5rem;
+      white-space: wrap; }
+
+/* --- Кастомная тема jsMind: netbeans --- */
+.theme-netbeans {
+  color: var(--nb-edit-fg) !important; }
+  .theme-netbeans jmnode {
+    box-sizing: border-box;
+    background-color: var(--nb-ui-bg);
+    color: var(--nb-ui-fg);
+    border: 1px solid var(--nb-ui-border);
+    border-radius: 4px;
+    font-family: "Roboto", sans-serif;
+    font-size: var(--nb-ui-font-size);
+    padding: 0.4em 0.8em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease; }
+    .theme-netbeans jmnode.type-root {
+      font-family: "Google Sans", "Consolas", "Monaco", monospace;
+      font-size: calc(var(--nb-ui-font-size) + 3px);
+      font-weight: bold;
+      border: 3px solid var(--nb-ui-border);
+      border-radius: 24px;
+      padding: calc(0.4em * 1.5) calc(0.8em * 1.5);
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); }
+    .theme-netbeans jmnode.type-group {
+      background-color: var(--nb-ui-panel);
+      font-weight: 600;
+      border: 2px solid var(--nb-ui-border);
+      border-radius: 24px;
+      padding: calc(0.4em * 1.5) calc(0.8em * 1.5);
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); }
+    .theme-netbeans jmnode.type-module {
+      background-color: var(--nb-ui-panel);
+      font-size: calc(var(--nb-ui-font-size) + 1px);
+      font-weight: 600;
+      border: 3px double var(--nb-ui-border);
+      border-radius: 0px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px; }
+    .theme-netbeans jmnode.type-task {
+      background-color: var(--nb-edit-bg);
+      color: var(--nb-edit-fg);
+      border: 2px solid var(--nb-ui-border);
+      border-radius: 6px; }
+    .theme-netbeans jmnode.type-document {
+      background-color: var(--nb-edit-bg);
+      color: var(--nb-edit-fg);
+      border: none;
+      border-bottom: 3px solid var(--nb-ui-border);
+      border-radius: 0px;
+      padding-bottom: calc(0.4em + 2px); }
+    .theme-netbeans jmnode.type-note {
+      background-color: transparent;
+      color: var(--nb-syntax-comment);
+      border: none;
+      border-left: 4px solid var(--nb-ui-border);
+      border-radius: 0px;
+      box-shadow: none;
+      font-style: italic; }
+    .theme-netbeans jmnode.type-idea {
+      background-color: var(--nb-edit-bg);
+      color: var(--nb-edit-fg);
+      border: 2px dashed var(--nb-ui-border);
+      border-radius: 6px; }
+    .theme-netbeans jmnode.type-milestone {
+      background-color: var(--nb-ui-panel);
+      color: var(--nb-ui-fg);
+      border: 1px solid var(--nb-ui-border);
+      border-radius: 14px;
+      font-size: calc(var(--nb-ui-font-size) - 1px);
+      font-weight: bold; }
+    .theme-netbeans jmnode:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+      border-color: var(--nb-ui-active); }
+    .theme-netbeans jmnode.selected {
+      background-color: var(--nb-edit-selection) !important;
+      color: var(--nb-edit-fg) !important;
+      border-color: var(--nb-ui-active) !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important; }
+  .theme-netbeans jmnodes canvas {
+    color: var(--nb-ui-border); }
+
+jmnode {
+  max-width: 320px; }
+  jmnode .mm-node-body {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.5em; }
+  jmnode .mm-node-layout {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0; }
+  jmnode .mm-node-title {
+    padding: calc(0.4em / 2) 0; }
+    jmnode .mm-node-title + *:not(.mm-node-markers) {
+      margin-top: 0.4rem; }
+  jmnode .mm-node-dates, jmnode .mm-node-markers, jmnode .mm-node-badges {
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  jmnode .mm-node-dates {
+    font-size: 0.9em; }
+    jmnode .mm-node-dates:before {
+      content: "\e953";
+      margin-right: 0.4em;
+      display: inline-block;
+      font: normal normal normal 1.5em/1;
+      font-family: metro, "Segoe UI", "Open Sans", serif;
+      font-size: 0.9em;
+      line-height: 1;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-transform: translate(0, 0);
+      transform: translate(0, 0);
+      vertical-align: middle;
+      position: static; }
+  jmnode .mm-node-badges {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+    gap: 0.2em; }
+    jmnode .mm-node-badges .mm-badge .icon + .label {
+      display: none; }
+    jmnode .mm-node-badges .mm-badge.badge-score {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center; }
+      jmnode .mm-node-badges .mm-badge.badge-score .icon {
+        font-size: 1.3em;
+        /* Слегка увеличиваем звезду, чтобы цифра поместилась */ }
+      jmnode .mm-node-badges .mm-badge.badge-score .label {
+        display: flex !important;
+        /* Отменяем display: none для метки */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -46%);
+        /* Небольшая компенсация центрирования иконки */
+        font-size: 0.6em;
+        font-weight: bold;
+        color: #ffffff;
+        /* Цвет цифры внутри звезды */
+        line-height: 1;
+        pointer-events: none; }
+    jmnode .mm-node-badges .mm-badge.badge-score.badge-value-5_plus .label {
+      color: #000; }
+    jmnode .mm-node-badges .mm-badge.badge-score.badge-value-0 .label {
+      display: none; }
+  jmnode .mm-node-markers {
+    display: flex;
+    flex-direction: row;
+    font-size: 0.8rem;
+    font-weight: normal;
+    height: 0.8rem;
+    margin-bottom: -0.8rem;
+    transform: translateY(0.65rem);
+    gap: 0.2rem; }
+    jmnode .mm-node-markers.right-align {
+      justify-content: flex-end; }
+
+.jmnode-overflow-hidden .mm-node-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+.jmnode-overflow-hidden jmnode {
+  overflow: visible; }
+.jmnode-overflow-hidden .mm-node-markers {
+  overflow: visible; }
+
+/*@import "clswindow";*/
+/* стили csl74-menu */
+/* Базовые переменные палитры NetBeans с фолбеками */
+/* Цвет выделения / ховера */
+/* Для акцентных / danger элементов */
+/* Для disabled / subtext */
+.csl-window-backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4); }
+
+.csl-window-frame {
+  display: none;
+  position: fixed;
+  background: var(--nb-ui-panel);
+  color: var(--nb-ui-fg);
+  border: 1px solid var(--nb-ui-border);
+  border-radius: 5px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  min-width: 300px;
+  max-width: 90vw;
+  max-height: 90vh;
+  box-sizing: border-box; }
+  .csl-window-frame.csl-window-centered {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .csl-window-frame .csl-window-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--nb-ui-border);
+    gap: 0.4em; }
+    .csl-window-frame .csl-window-header .csl-window-close {
+      margin: 0;
+      cursor: pointer;
+      font-size: 1.4em;
+      line-height: 1;
+      order: 2;
+      border: none;
+      background: transparent; }
+      .csl-window-frame .csl-window-header .csl-window-close:hover {
+        background: #777;
+        color: #fff; }
+    .csl-window-frame .csl-window-header .csl-window-title {
+      padding: 0.4em 0.8em;
+      order: 1; }
+      .csl-window-frame .csl-window-header .csl-window-title .icon {
+        margin-right: 0.4em; }
+  .csl-window-frame .csl-dialog-footer {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0.4em;
+    border-top: 1px solid var(--nb-ui-border);
+    gap: 0.4em; }
+  .csl-window-frame button, .csl-window-frame input, .csl-window-frame textarea {
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0.2em 0.4em; }
+  .csl-window-frame button {
+    cursor: pointer; }
+  .csl-window-frame .csl-window-content {
+    background: var(--nb-ui-bg);
+    padding: 0.4em 0.8em;
+    overflow-y: auto; }
+
+/* стили csl74-menu */
+/* Базовые переменные палитры NetBeans с фолбеками */
+/* Цвет выделения / ховера */
+/* Для акцентных / danger элементов */
+/* Для disabled / subtext */
+.cls74-control .control-group .speed-button .icon, .csl74-tabs .csl74-tabs-nav .csl74-tabs-item .icon, .csl74-select .icon {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: currentColor;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain; }
+
+.cls74-control .form-control, .cls74-control .speed-button, .cls74-control .csl74-select {
+  padding: 0.4em 0.8em;
+  border: 1px solid var(--nb-ui-border);
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: inherit;
+  font-size: var(--nb-ui-font-size); }
+  .cls74-control .form-control:focus, .cls74-control .speed-button:focus, .cls74-control .csl74-select:focus {
+    outline: none; }
+.cls74-control button.form-control, .cls74-control select.form-control, .cls74-control .speed-button {
+  cursor: pointer; }
+.cls74-control .control-group {
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: 5px;
+  padding: 0;
+  display: flex;
+  flex-direction: row; }
+  .cls74-control .control-group input {
+    min-width: 0; }
+  .cls74-control .control-group > * {
+    border-radius: 0; }
+    .cls74-control .control-group > *:first-child {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px; }
+    .cls74-control .control-group > *:last-child {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px; }
+    .cls74-control .control-group > *:not(:first-child) {
+      border-left: none; }
+  .cls74-control .control-group .form-control {
+    flex: 1 1 auto; }
+.cls74-control .csl74-select .csl74-select-value {
+  display: flex;
+  align-items: center;
+  gap: 0.4em; }
+  .cls74-control .csl74-select .csl74-select-value .text {
+    flex: 1 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+
+.csl74-tabs {
+  display: flex;
+  flex-direction: column; }
+  .csl74-tabs .csl74-tabs-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 2px;
+    border-bottom: 1px solid var(--nb-ui-border);
+    user-select: none; }
+    .csl74-tabs .csl74-tabs-nav .csl74-tabs-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4em;
+      padding: 0.4em 0.8em;
+      cursor: pointer;
+      border: 1px solid transparent;
+      border-bottom: none;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      margin-bottom: -1px;
+      background: transparent;
+      color: inherit;
+      font-size: var(--nb-ui-font-size); }
+      .csl74-tabs .csl74-tabs-nav .csl74-tabs-item:hover {
+        background-color: rgba(0, 0, 0, 0.05); }
+      .csl74-tabs .csl74-tabs-nav .csl74-tabs-item.is-active, .csl74-tabs .csl74-tabs-nav .csl74-tabs-item.active {
+        background-color: var(--nb-ui-bg);
+        border-color: var(--nb-ui-border);
+        border-bottom-color: var(--nb-ui-bg); }
+  .csl74-tabs .csl74-tabs-panels {
+    flex: 1 1 auto; }
+    .csl74-tabs .csl74-tabs-panels .csl74-tabs-panel {
+      display: none; }
+      .csl74-tabs .csl74-tabs-panels .csl74-tabs-panel.is-active, .csl74-tabs .csl74-tabs-panels .csl74-tabs-panel.active {
+        display: block; }
+
+/* Шеврон / Стрелка вниз */
+.csl74-icon-chevron-down {
+  mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>');
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>'); }
+
+.csl74-select {
+  display: inline-flex;
+  flex-direction: row;
+  gap: 0.5em;
+  align-items: center;
+  cursor: pointer; }
+  .csl74-select > select {
+    display: none; }
+  .csl74-select > *:not(.icon) {
+    flex: 1 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  .csl74-select.is-open .csl74-icon-chevron-down {
+    transform: rotate(180deg); }
+
+/* стили csl74-menu */
+/* Базовые переменные палитры NetBeans с фолбеками */
+/* Цвет выделения / ховера */
+/* Для акцентных / danger элементов */
+/* Для disabled / subtext */
+.csl74-menu-container {
+  position: absolute;
+  z-index: 9999;
+  background: var(--nb-ui-panel);
+  color: var(--nb-ui-fg);
+  border: 1px solid var(--nb-ui-border);
+  border-radius: 5px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  font-size: var(--nb-ui-font-size);
+  padding: 0; }
+  .csl74-menu-container .csl74-menu-list {
+    list-style: none;
+    margin: 0.4em 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; }
+  .csl74-menu-container .csl74-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 0.4em 0.8em;
+    cursor: pointer;
+    gap: 0.4em;
+    user-select: none;
+    white-space: nowrap;
+    color: var(--nb-ui-fg); }
+    .csl74-menu-container .csl74-menu-item:hover {
+      background-color: var(--nb-ui-active); }
+    .csl74-menu-container .csl74-menu-item.danger {
+      color: var(--nb-syntax-keyword); }
+      .csl74-menu-container .csl74-menu-item.danger .csl74-menu-icon {
+        background-color: var(--nb-syntax-keyword); }
+    .csl74-menu-container .csl74-menu-item.disabled {
+      color: var(--nb-syntax-comment);
+      cursor: default;
+      pointer-events: none;
+      opacity: 0.6; }
+      .csl74-menu-container .csl74-menu-item.disabled .csl74-menu-icon {
+        background-color: var(--nb-syntax-comment); }
+    .csl74-menu-container .csl74-menu-item .csl74-menu-label {
+      flex: 1 1 auto;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    .csl74-menu-container .csl74-menu-item .csl74-menu-subtext {
+      color: var(--nb-syntax-comment);
+      margin-left: 0.8em; }
+  .csl74-menu-container .csl74-menu-divider {
+    height: 1px;
+    background: var(--nb-ui-border);
+    margin: 0.4em 0;
+    padding: 0;
+    pointer-events: none; }
+
+/* стили cls74-datepicker */
+/* Базовые переменные палитры NetBeans с фолбеками */
+/* Текст на акцентном фоне */
+/* Цвет выделения / ховера */
+/* Для акцентных / danger элементов */
+/* Для disabled / subtext */
+/* Переменные datepicker: рамки */
+/* Переменные datepicker: отступы */
+/* Переменные datepicker: размеры */
+/* Переменные datepicker: шрифты */
+/* Переменные datepicker: прочее */
+.csl74-datepicker, .cls74-datepicker {
+  position: absolute;
+  z-index: 1050;
+  background-color: var(--nb-ui-panel);
+  color: var(--nb-ui-fg);
+  border: 1px solid var(--nb-ui-border);
+  border-radius: 5px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  font-size: var(--nb-ui-font-size);
+  user-select: none;
+  padding: 0.4em 0.8em;
+  min-width: 230px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem; }
+  .csl74-datepicker .csl74-datepicker-header, .cls74-datepicker .csl74-datepicker-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.1rem;
+    padding-bottom: 0.1rem;
+    border-bottom: 1px solid var(--nb-ui-border); }
+    .csl74-datepicker .csl74-datepicker-header .csl74-datepicker-title, .cls74-datepicker .csl74-datepicker-header .csl74-datepicker-title {
+      font-weight: bold;
+      cursor: pointer;
+      padding: 0.1rem 0.11rem;
+      border-radius: 5px;
+      flex-grow: 1;
+      text-align: center; }
+      .csl74-datepicker .csl74-datepicker-header .csl74-datepicker-title:hover, .cls74-datepicker .csl74-datepicker-header .csl74-datepicker-title:hover {
+        background-color: var(--nb-ui-active); }
+  .csl74-datepicker .csl74-datepicker-btn, .cls74-datepicker .csl74-datepicker-btn {
+    font-size: 1em;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    padding: 0.1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px; }
+    .csl74-datepicker .csl74-datepicker-btn:hover, .cls74-datepicker .csl74-datepicker-btn:hover {
+      background-color: var(--nb-ui-active); }
+  .csl74-datepicker .csl74-datepicker-grid, .cls74-datepicker .csl74-datepicker-grid {
+    font-size: 1rem;
+    width: 100%;
+    border-collapse: collapse; }
+    .csl74-datepicker .csl74-datepicker-grid th, .cls74-datepicker .csl74-datepicker-grid th {
+      font-size: 1rem;
+      font-weight: normal;
+      color: var(--nb-syntax-comment);
+      font-size: calc($datepicker_FontSize * 0.9);
+      text-align: center;
+      padding: 0.1rem 0.11rem; }
+    .csl74-datepicker .csl74-datepicker-grid .csl74-datepicker-cell, .cls74-datepicker .csl74-datepicker-grid .csl74-datepicker-cell {
+      font-size: 1rem;
+      text-align: center;
+      padding: 0.1rem 0.11rem;
+      cursor: pointer;
+      border-radius: 5px; }
+      .csl74-datepicker .csl74-datepicker-grid .csl74-datepicker-cell:hover, .cls74-datepicker .csl74-datepicker-grid .csl74-datepicker-cell:hover {
+        background-color: var(--nb-ui-active); }
+      .csl74-datepicker .csl74-datepicker-grid .csl74-datepicker-cell.is-muted, .cls74-datepicker .csl74-datepicker-grid .csl74-datepicker-cell.is-muted {
+        color: var(--nb-syntax-comment);
+        opacity: 0.5; }
+      .csl74-datepicker .csl74-datepicker-grid .csl74-datepicker-cell.is-today, .cls74-datepicker .csl74-datepicker-grid .csl74-datepicker-cell.is-today {
+        font-weight: bold;
+        text-decoration: underline; }
+      .csl74-datepicker .csl74-datepicker-grid .csl74-datepicker-cell.is-selected, .cls74-datepicker .csl74-datepicker-grid .csl74-datepicker-cell.is-selected {
+        background-color: var(--nb-syntax-keyword);
+        color: #ffffff; }
+  .csl74-datepicker .csl74-datepicker-block-grid, .cls74-datepicker .csl74-datepicker-block-grid {
+    font-size: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.1rem;
+    padding: 4px 0; }
+    .csl74-datepicker .csl74-datepicker-block-grid .csl74-datepicker-block-cell, .cls74-datepicker .csl74-datepicker-block-grid .csl74-datepicker-block-cell {
+      text-align: center;
+      padding: 0.1rem 0.11rem;
+      cursor: pointer;
+      border-radius: 5px; }
+      .csl74-datepicker .csl74-datepicker-block-grid .csl74-datepicker-block-cell:hover, .cls74-datepicker .csl74-datepicker-block-grid .csl74-datepicker-block-cell:hover {
+        background-color: var(--nb-ui-active); }
+      .csl74-datepicker .csl74-datepicker-block-grid .csl74-datepicker-block-cell.is-muted, .cls74-datepicker .csl74-datepicker-block-grid .csl74-datepicker-block-cell.is-muted {
+        color: var(--nb-syntax-comment);
+        opacity: 0.5; }
+      .csl74-datepicker .csl74-datepicker-block-grid .csl74-datepicker-block-cell.is-selected, .cls74-datepicker .csl74-datepicker-block-grid .csl74-datepicker-block-cell.is-selected {
+        background-color: var(--nb-syntax-keyword);
+        color: #ffffff; }
+  .csl74-datepicker .csl74-datepicker-time, .cls74-datepicker .csl74-datepicker-time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.1rem;
+    padding: 0.1rem;
+    border-top: 1px solid rgba(var(--nb-ui-border), 0.6); }
+    .csl74-datepicker .csl74-datepicker-time .csl74-datepicker-time-unit, .cls74-datepicker .csl74-datepicker-time .csl74-datepicker-time-unit {
+      font-size: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .csl74-datepicker .csl74-datepicker-time .csl74-datepicker-time-unit .csl74-datepicker-time-val, .cls74-datepicker .csl74-datepicker-time .csl74-datepicker-time-unit .csl74-datepicker-time-val {
+        font-size: 1rem;
+        font-size: var(--nb-ui-font-size);
+        font-weight: bold;
+        padding: 0.1rem 0.11rem;
+        min-width: 22px;
+        text-align: center; }
+    .csl74-datepicker .csl74-datepicker-time .csl74-datepicker-time-sep, .cls74-datepicker .csl74-datepicker-time .csl74-datepicker-time-sep {
+      font-weight: bold;
+      color: var(--nb-syntax-comment); }
+  .csl74-datepicker .csl74-datepicker-footer, .cls74-datepicker .csl74-datepicker-footer {
+    display: flex;
+    justify-content: center;
+    padding-top: 0.1rem;
+    border-top: 1px solid rgba(var(--nb-ui-border), 0.6); }
+    .csl74-datepicker .csl74-datepicker-footer .csl74-datepicker-today-btn, .cls74-datepicker .csl74-datepicker-footer .csl74-datepicker-today-btn {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: var(--nb-syntax-keyword);
+      font-size: var(--nb-ui-font-size);
+      padding: 0.1rem 0.11rem;
+      border-radius: 5px; }
+      .csl74-datepicker .csl74-datepicker-footer .csl74-datepicker-today-btn:hover, .cls74-datepicker .csl74-datepicker-footer .csl74-datepicker-today-btn:hover {
+        background-color: var(--nb-ui-active); }
+
+/* Эмодзи */
+.emoji {
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  font-size: inherit;
+  line-height: 1em;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  .emoji.em-square-num-1:before {
+    content: '1️⃣'; }
+
+.em-num {
+  font-style: normal; }
+  .em-num.em-1:before {
+    content: "1️⃣"; }
+  .em-num.em-2:before {
+    content: "2️⃣"; }
+  .em-num.em-3:before {
+    content: "3️⃣"; }
+  .em-num.em-4:before {
+    content: "4️⃣"; }
+  .em-num.em-5:before {
+    content: "5️⃣"; }
+
+/* редактор полей */
+.mm-node-fields-editor {
+  min-width: 60vw;
+  max-width: 90vw;
+  max-height: 70vh; }
+  .mm-node-fields-editor .fields-editor-fields {
+    border-right: 1px solid var(--nb-ui-border); }
+    .mm-node-fields-editor .fields-editor-fields .csl74-tabs-panels {
+      padding-right: 0.4em; }
+    .mm-node-fields-editor .fields-editor-fields .field-set {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4em; }
+    .mm-node-fields-editor .fields-editor-fields .fields-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 0.4em; }
+    .mm-node-fields-editor .fields-editor-fields .csl-dialog-textarea {
+      width: 100%;
+      min-height: 12em; }
+  .mm-node-fields-editor .csl74-tabs-panel {
+    overflow-y: scroll;
+    max-height: 60vh; }
+  .mm-node-fields-editor .fields-editor-toolbar .mm-tool-button {
+    font-size: 1rem;
+    width: 2.2em;
+    height: 2.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    cursor: pointer; }
+    .mm-node-fields-editor .fields-editor-toolbar .mm-tool-button .icon {
+      font-size: 1.2em;
+      width: 1em;
+      height: 1em; }
+  .mm-node-fields-editor .csl74-select-value .icon {
+    color: inherit;
+    background-color: inherit; }
+  .mm-node-fields-editor .csl-window-content {
+    font-size: 1rem;
+    display: flex;
+    align-items: stretch;
+    padding: 0.4em;
+    gap: 0.4em; }
+    .mm-node-fields-editor .csl-window-content .fields-editor-fields {
+      flex-grow: 1; }
+      .mm-node-fields-editor .csl-window-content .fields-editor-fields .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2em; }
+        .mm-node-fields-editor .csl-window-content .fields-editor-fields .form-group label {
+          font-size: 0.9em; }
+      .mm-node-fields-editor .csl-window-content .fields-editor-fields .csl74-select {
+        color: var(--nb-edit-fg);
+        background-color: var(--nb-edit-bg);
+        font-size: var(--nb-edit-font-size); }
+  .mm-node-fields-editor .fields-editor-sidepanel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+    justify-content: space-between; }
+    .mm-node-fields-editor .fields-editor-sidepanel .fields-editor-toolbar > *:not(:first-child) {
+      margin-top: -1px; }
+  .mm-node-fields-editor .menu-icon {
+    display: inline-block;
+    color: var(--nb-ui-fg);
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background-color: currentColor;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain; }
+  .mm-node-fields-editor .mm-links-section .mm-links-list .mm-link-item .form-control.icon {
+    padding-right: 0;
+    border-right: 0;
+    width: 1em;
+    flex-grow: 0; }
+  .mm-node-fields-editor .mm-links-section .mm-links-list .mm-link-item .form-control.label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .mm-node-fields-editor .mm-links-section .mm-links-list .mm-link-item .form-control.speed-button {
+    flex-grow: 0;
+    font-size: 1em; }
+    .mm-node-fields-editor .mm-links-section .mm-links-list .mm-link-item .form-control.speed-button:hover {
+      background: #777;
+      color: #fff; }
+  .mm-node-fields-editor .mm-links-section .mm-links-list .mm-link-item + .mm-link-item .form-control {
+    border-top: none; }
+    .mm-node-fields-editor .mm-links-section .mm-links-list .mm-link-item + .mm-link-item .form-control:first-child {
+      border-top-left-radius: 0; }
+    .mm-node-fields-editor .mm-links-section .mm-links-list .mm-link-item + .mm-link-item .form-control:last-child {
+      border-top-right-radius: 0; }
+  .mm-node-fields-editor .mm-links-section .mm-links-list .mm-link-item:not(:last-child) .form-control:first-child {
+    border-bottom-left-radius: 0; }
+  .mm-node-fields-editor .mm-links-section .mm-links-list .mm-link-item:not(:last-child) .form-control:last-child {
+    border-bottom-right-radius: 0; }
+
+.add-field-dialog .csl74-icon {
+  color: var(--nb-ui-fg);
+  background-color: currentColor; }
+
+.add-field-dialog-content {
+  overflow: visible; }
+  .add-field-dialog-content .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em; }
+    .add-field-dialog-content .form-group label {
+      font-size: 0.9em; }
+  .add-field-dialog-content .mm-add-field-dialog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
+    gap: 0.4em;
+    min-width: 50vw; }
+
+.mm-node-inspector {
+  width: 30%;
+  background: var(--nb-ui-bg); }
+
+.csl74-tabs {
+  gap: 0; }
+  .csl74-tabs .csl74-tabs-nav {
+    padding-top: 2px;
+    background: var(--nb-ui-border); }
+    .csl74-tabs .csl74-tabs-nav .csl74-tabs-item {
+      background: var(--nb-ui-bg);
+      padding: 0.2em 0.4em; }
+      .csl74-tabs .csl74-tabs-nav .csl74-tabs-item.is-active, .csl74-tabs .csl74-tabs-nav .csl74-tabs-item.active {
+        background: var(--nb-edit-bg); }
+      .csl74-tabs .csl74-tabs-nav .csl74-tabs-item:hover {
+        background: var(--nb-ui-active); }
+  .csl74-tabs .csl74-tabs-panels {
+    background: var(--nb-edit-bg);
+    color: var(--nb-edit-fg);
+    padding: 0.4em; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch; }
+
+.mindmanager-layout {
+  width: 100%;
+  height: 100%;
+  background: var(--nb-ui-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch; }
+
+.mindmanager-panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: stretch;
+  padding: 0.4em;
+  padding-bottom: 0;
+  gap: 0.4em; }
+  .mindmanager-panel .mm-node-inspector, .mindmanager-panel .mm-inspector-fields {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: stretch;
+    gap: 0.4em; }
+    .mindmanager-panel .mm-node-inspector .mm-inspector-input, .mindmanager-panel .mm-inspector-fields .mm-inspector-input {
+      padding: 0.4em 0.8em;
+      font-size: var(--nb-edit-font-size);
+      font-family: "Google Sans", "Consolas", "Monaco", monospace; }
+      .mindmanager-panel .mm-node-inspector .mm-inspector-input.grow, .mindmanager-panel .mm-inspector-fields .mm-inspector-input.grow {
+        flex-grow: 1; }
+
+.mm-canvas-container {
+  flex-grow: 1;
+  flex-shrink: 1;
+  background: var(--nb-edit-bg); }
+
+.csl-window-frame {
+  background: var(--nb-ui-bg); }
+
+.mm-node-note-editor {
+  max-width: 50%;
+  min-width: 40%;
+  background: var(--nb-ui-bg); }
+  .mm-node-note-editor .csl-window-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .mm-node-note-editor .csl-window-content {
+    padding: 0;
+    position: relative; }
+    .mm-node-note-editor .csl-window-content textarea {
+      border: none;
+      min-height: 6em;
+      width: 100%; }
+
+.num-icon {
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  font-size: inherit;
+  line-height: 1em;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* --- 1. Контурный круг (① - ⑳) --- */
+  /* --- 2. Закрашенный круг (❶ - ➓) --- */
+  /* --- 3. Двойной контурный круг (⓵ - ⓾) --- */
+  /* --- 4. Контурный квадрат (🔲 / 💬 стиль ⒈ - ⒑) --- */
+  /* --- 5. Цифры в скобках (⑴ - ⒇) --- */ }
+  .num-icon:before {
+    font-size: 1.15em; }
+  .num-icon.circle.num-0:before {
+    content: "\24EA"; }
+  .num-icon.circle.num-1:before {
+    content: "\2460"; }
+  .num-icon.circle.num-2:before {
+    content: "\2461"; }
+  .num-icon.circle.num-3:before {
+    content: "\2462"; }
+  .num-icon.circle.num-4:before {
+    content: "\2463"; }
+  .num-icon.circle.num-5:before {
+    content: "\2464"; }
+  .num-icon.circle.num-6:before {
+    content: "\2465"; }
+  .num-icon.circle.num-7:before {
+    content: "\2466"; }
+  .num-icon.circle.num-8:before {
+    content: "\2467"; }
+  .num-icon.circle.num-9:before {
+    content: "\2468"; }
+  .num-icon.circle.num-10:before {
+    content: "\2469"; }
+  .num-icon.circle.num-11:before {
+    content: "\246A"; }
+  .num-icon.circle.num-12:before {
+    content: "\246B"; }
+  .num-icon.circle.num-13:before {
+    content: "\246C"; }
+  .num-icon.circle.num-14:before {
+    content: "\246D"; }
+  .num-icon.circle.num-15:before {
+    content: "\246E"; }
+  .num-icon.circle.num-16:before {
+    content: "\246F"; }
+  .num-icon.circle.num-17:before {
+    content: "\2470"; }
+  .num-icon.circle.num-18:before {
+    content: "\2471"; }
+  .num-icon.circle.num-19:before {
+    content: "\2472"; }
+  .num-icon.circle.num-20:before {
+    content: "\2473"; }
+  .num-icon.fill-circle {
+    /* Закрашенные 11-20 в Unicode без засечек (Sans-Serif) */ }
+    .num-icon.fill-circle.num-0:before {
+      content: "\24FF"; }
+    .num-icon.fill-circle.num-1:before {
+      content: "\2776"; }
+    .num-icon.fill-circle.num-2:before {
+      content: "\2777"; }
+    .num-icon.fill-circle.num-3:before {
+      content: "\2778"; }
+    .num-icon.fill-circle.num-4:before {
+      content: "\2779"; }
+    .num-icon.fill-circle.num-5:before {
+      content: "\277A"; }
+    .num-icon.fill-circle.num-6:before {
+      content: "\277B"; }
+    .num-icon.fill-circle.num-7:before {
+      content: "\277C"; }
+    .num-icon.fill-circle.num-8:before {
+      content: "\277D"; }
+    .num-icon.fill-circle.num-9:before {
+      content: "\277E"; }
+    .num-icon.fill-circle.num-10:before {
+      content: "\277F"; }
+    .num-icon.fill-circle.num-11:before {
+      content: "\24EB"; }
+    .num-icon.fill-circle.num-12:before {
+      content: "\24EC"; }
+    .num-icon.fill-circle.num-13:before {
+      content: "\24ED"; }
+    .num-icon.fill-circle.num-14:before {
+      content: "\24EE"; }
+    .num-icon.fill-circle.num-15:before {
+      content: "\24EF"; }
+    .num-icon.fill-circle.num-16:before {
+      content: "\24F0"; }
+    .num-icon.fill-circle.num-17:before {
+      content: "\24F1"; }
+    .num-icon.fill-circle.num-18:before {
+      content: "\24F2"; }
+    .num-icon.fill-circle.num-19:before {
+      content: "\24F3"; }
+    .num-icon.fill-circle.num-20:before {
+      content: "\24F4"; }
+  .num-icon.double-circle.num-1:before {
+    content: "\24F5"; }
+  .num-icon.double-circle.num-2:before {
+    content: "\24F6"; }
+  .num-icon.double-circle.num-3:before {
+    content: "\24F7"; }
+  .num-icon.double-circle.num-4:before {
+    content: "\24F8"; }
+  .num-icon.double-circle.num-5:before {
+    content: "\24F9"; }
+  .num-icon.double-circle.num-6:before {
+    content: "\24FA"; }
+  .num-icon.double-circle.num-7:before {
+    content: "\24FB"; }
+  .num-icon.double-circle.num-8:before {
+    content: "\24FC"; }
+  .num-icon.double-circle.num-9:before {
+    content: "\24FD"; }
+  .num-icon.double-circle.num-10:before {
+    content: "\24FE"; }
+  .num-icon.square {
+    /* Прямой Юникод-квадрат 1 */
+    /* 1. с точкой */ }
+    .num-icon.square.num-1:before {
+      content: "\1F532"; }
+    .num-icon.square.num-1-alt:before {
+      content: "\2488"; }
+    .num-icon.square.num-2-alt:before {
+      content: "\2489"; }
+    .num-icon.square.num-3-alt:before {
+      content: "\248A"; }
+    .num-icon.square.num-4-alt:before {
+      content: "\248B"; }
+    .num-icon.square.num-5-alt:before {
+      content: "\248C"; }
+  .num-icon.paren.num-1:before {
+    content: "\2474"; }
+  .num-icon.paren.num-2:before {
+    content: "\2475"; }
+  .num-icon.paren.num-3:before {
+    content: "\2476"; }
+  .num-icon.paren.num-4:before {
+    content: "\2477"; }
+  .num-icon.paren.num-5:before {
+    content: "\2478"; }
+  .num-icon.paren.num-6:before {
+    content: "\2479"; }
+  .num-icon.paren.num-7:before {
+    content: "\247A"; }
+  .num-icon.paren.num-8:before {
+    content: "\247B"; }
+  .num-icon.paren.num-9:before {
+    content: "\247C"; }
+  .num-icon.paren.num-10:before {
+    content: "\247D"; }
+
+/*# sourceMappingURL=project.css.map */

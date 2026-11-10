@@ -1,0 +1,26 @@
+# CrazyGerman Plugin Local Backups
+/.sparky/
+/.sparky/.backup/
+*.log
+api_debug.log
+settings.json
+
+/nbproject/
+/nbproject/private/
+
+/src/su/crazy74/sparky/system_prompt.md
+
+# NetBeans Build & Distribution
+/build/
+/dist/
+
+# NetBeans Test Execution Directory
+/testuserdir/
+
+# OS and IDE temporary files
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+.idea/
+.vscode/

@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+/* Google Sans */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Google Sans Regular'), local('GoogleSans-Regular'), url(GoogleSans-Regular.ttf);
+}
+@font-face {
+  font-family: 'Google Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Google Sans Italic'), local('GoogleSans-Italic'), url(GoogleSans-Italic.ttf);
+}
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Google Sans Medium'), local('GoogleSans-Medium'), url(GoogleSans-Medium.ttf);
+}
+@font-face {
+  font-family: 'Google Sans';
+  font-style: italic;
+  font-weight: 500;
+  src: local('Google Sans Medium Italic'), local('GoogleSans-MediumItalic'), url(GoogleSans-MediumItalic.ttf);
+}
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Google Sans SemiBold'), local('GoogleSans-SemiBold'), url(GoogleSans-SemiBold.ttf);
+}
+@font-face {
+  font-family: 'Google Sans';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Google Sans SemiBold Italic'), local('GoogleSans-SemiBoldItalic'), url(GoogleSans-SemiBoldItalic.ttf);
+}
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Google Sans Bold'), local('GoogleSans-Bold'), url(GoogleSans-Bold.ttf);
+}
+@font-face {
+  font-face: 'Google Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Google Sans Bold Italic'), local('GoogleSans-BoldItalic'), url(GoogleSans-BoldItalic.ttf);
+}
+
+/* Версия 17pt (если нужна отдельно для заголовков) */
+@font-face {
+  font-family: 'Google Sans 17pt';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Google Sans 17pt Regular'), local('GoogleSans_17pt-Regular'), url(GoogleSans_17pt-Regular.ttf);
+}
+@font-face {
+  font-family: 'Google Sans 17pt';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Google Sans 17pt Bold'), local('GoogleSans_17pt-Bold'), url(GoogleSans_17pt-Bold.ttf);
+}
