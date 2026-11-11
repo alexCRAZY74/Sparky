@@ -10,7 +10,7 @@
 
 ## 📖 What It Is
 
-Sparky is a planning and development tool inside Apache NetBeans, designed for both solo and team work.
+Sparky is a planning and development tool inside Apache NetBeans, designed for both solo and team work. The project repository is available at [GitHub](https://github.com/alexCRAZY74/Sparky).
 
 An interactive mind map of the project is stored directly in the repository as Markdown. The AI assistant relies on this map: it sees the modules, tasks and their statuses, and solves each task in the context of the whole system. The team records its development rules in trainer files, and the assistant works within those rules.
 

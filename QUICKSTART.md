@@ -1,6 +1,6 @@
 # Quick Start: Sparky for Apache NetBeans
 
-Sparky is an engineering assistant and task-planning tool built into the Apache NetBeans IDE.
+Sparky is an engineering assistant and task-planning tool built into the Apache NetBeans IDE. The project repository is available at [GitHub](https://github.com/alexCRAZY74/Sparky).
 
 ---
 
@@ -16,7 +16,7 @@ The plugin interface (the embedded browser for the mind map and the chat) requir
 
 ## 2. Installing the Plugin
 
-1. Download the plugin's binary package `*.nbm` from the [Releases](https://github.com/crazy74/Sparky/releases) section.
+1. Download the plugin's binary package `*.nbm` from the [Releases](https://github.com/alexCRAZY74/Sparky/releases) section.
 2. In the NetBeans main menu open: **Tools → Plugins → Downloaded** tab.
 3. Click **Add Plugins...**, select the downloaded `.nbm` file and confirm the installation (**Install**).
 4. Restart the IDE if prompted.

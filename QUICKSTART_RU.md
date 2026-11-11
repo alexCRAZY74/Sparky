@@ -1,6 +1,6 @@
 # Быстрый старт: Sparky для Apache NetBeans
 
-Sparky — инженерный ассистент и инструмент планирования задач, встроенный в среду разработки Apache NetBeans.
+Sparky — инженерный ассистент и инструмент планирования задач, встроенный в среду разработки Apache NetBeans. Репозиторий проекта доступен на [GitHub](https://github.com/alexCRAZY74/Sparky).
 
 ---
 
@@ -16,7 +16,7 @@ Sparky — инженерный ассистент и инструмент пл�
 
 ## 2. Установка плагина
 
-1. Скачайте бинарный пакет плагина `*.nbm` из раздела [Releases](https://github.com/crazy74/Sparky/releases).
+1. Скачайте бинарный пакет плагина `*.nbm` из раздела [Releases](https://github.com/alexCRAZY74/Sparky/releases).
 2. В главном меню NetBeans откройте: **Tools → Plugins → вкладка Downloaded**.
 3. Нажмите кнопку **Add Plugins...**, выберите скачанный `.nbm` файл и подтвердите установку (**Install**).
 4. Перезапустите IDE при необходимости.
