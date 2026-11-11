@@ -2,7 +2,7 @@
 
 ---
 
-## 📦 `crazy.module.german.interfaces`
+## 📦 `su.crazy74.sparky.interfaces`
 
 ### `i_Session`
 Контракт для управления жизненным циклом сессии чата. Связывает GUID окна с конкретным проектом и обеспечивает канал для передачи ответов от `BrainHandler` обратно в интерфейс.
@@ -36,7 +36,7 @@
 
 ---
 
-## 📦 `crazy.module.german.core`
+## 📦 `su.crazy74.sparky.core`
 
 ### `Storage`
 Универсальный контейнер данных на основе абстрактного `Object data`. Хранит произвольно вложенные структуры (объекты `Map` и массивы `List`) и позволяет работать с ними через строковые пути вида `"key/subkey/index"`. Является базовым классом для `SessionNode`.
@@ -106,10 +106,10 @@
 ### `AppHandler`
 Глобальный менеджер настроек и системного вывода. Управляет файлом `settings.json` в папке конфигурации NetBeans и выводом в именованную консоль «German Console».
 * `public static AppHandler getDefault()`: Возвращает единственный экземпляр (Singleton).
-* `public void loadConfig()`: Читает настройки из `config/crazy_german/settings.json`.
+* `public void loadConfig()`: Читает настройки из `config/crazy_sparky/settings.json`.
 * `public void saveConfig()`: Записывает текущие настройки обратно в файл.
-* `public static void toConsole(String text)`: Печатает сообщение в Output-окно IDE (вкладка «German Console»).
-* `public static FileObject getProfileFile()`: Возвращает указатель на файл профиля пользователя (`config/crazy_german/user_profile.json`).
+* `public static void toConsole(String text)`: Печатает сообщение в Output-окно IDE (вкладка «Sparky Console»).
+* `public static FileObject getProfileFile()`: Возвращает указатель на файл профиля пользователя (`config/crazy_sparky/user_profile.json`).
 
 ---
 
@@ -150,7 +150,7 @@
 Обертка над NetBeans `Project`. Отвечает за изоляцию контекста конкретного проекта, фильтрацию временных файлов и генерацию карты репозитория.
 
 * `public static ProjectHandler BySession(i_Session session)`: Фабричный метод получения обработчика из текущей сессии чата.
-* `public FileObject getPluginDir()`: Возвращает или создает FileObject скрытой директории `.german` в корне проекта.
+* `public FileObject getPluginDir()`: Возвращает или создает FileObject скрытой директории `.sparky` в корне проекта.
 * `public FileObject getConfigFile()`: Возвращает конфигурационный файл `config.json` проекта.
 * `public FileObject getTrainersFile()`: Возвращает файл списка файлов-тренеров `trainers.json`.
 * `public FileObject getProfileFile()`: Возвращает файл профиля проекта `profile.json`.
@@ -170,9 +170,9 @@
 * `public Storage commandSet(Storage form)`: Диспетчер SET-запросов от фронтенда (команда `"map-tree"`).
 * `public Storage saveNodeArray(Storage form)`: Принимает плоский массив узлов от jsMind, извлекает состояния отображения (свернут/развернут) в `states()`, настройки корня в `config()`, а чистую структуру сохраняет в `nodes()`.
 * `public Storage getNodeArray()`: Собирает плоский массив узлов для jsMind, обогащая структуру из `nodes()` метаданными из `config()` и состояниями из `states()`.
-* `public DataLayer states()`: Возвращает слой состояний веток. Хранится в `<userdir>/config/crazy_german/nap_<rootGuid>.json`.
-* `public DataLayer config()`: Возвращает слой конфигурации карты (настройки Канбан-колонок). Хранится в `<project_root>/.german/map_config.json`.
-* `public DataLayer nodes()`: Возвращает слой структуры карты. Хранится в `<project_root>/.german/project_map.md`.
+* `public DataLayer states()`: Возвращает слой состояний веток. Хранится в `<userdir>/config/crazy_sparky/nap_<rootGuid>.json`.
+* `public DataLayer config()`: Возвращает слой конфигурации карты (настройки Канбан-колонок). Хранится в `<project_root>/.sparky/map_config.json`.
+* `public DataLayer nodes()`: Возвращает слой структуры карты. Хранится в `<project_root>/.sparky/project_map.md`.
 
 #### Вложенный класс `DataLayer`
 Специализированный наследник `Storage`, привязанный к физическому файлу. Внутренне оперирует плоским списком узлов ментальной карты. Отвечает за прозрачную загрузку и сохранение данных в форматах JSON или Markdown.
@@ -214,13 +214,13 @@ AppConfig.get("some/path")
 * `public static int getInt(String path)`: Обёртка над `get()`. Возвращает `0` при отсутствии ключа.
 
 #### Работа с файлом настроек
-* `public static File getConfigDir()`: Возвращает `File` для `<userdir>/config/crazy_german/`. Если папка не существует — **создаёт** её.
-* `public static FileObject getConfigFile()`: Возвращает `FileObject` для `<userdir>/config/crazy_german/settings.json`. Если файл или папка не существуют — **создаёт** их с содержимым `{}`.
+* `public static File getConfigDir()`: Возвращает `File` для `<userdir>/config/crazy_sparky/`. Если папка не существует — **создаёт** её.
+* `public static FileObject getConfigFile()`: Возвращает `FileObject` для `<userdir>/config/crazy_sparky/settings.json`. Если файл или папка не существуют — **создаёт** их с содержимым `{}`.
 * `public static void LoadFromFile()`: Читает `settings.json` в `UserData`. При ошибке инициализирует пустой `UserData`.
 * `public static void SaveToFile()`: Сохраняет `UserData` в файл в формате Pretty Print (UTF-8).
 * `public static void UpdateFromSystem()`: Обновляет `SystemData` из текущего `UIManager`. Вызывать при смене темы NetBeans.
 
-> ⚠️ Публичного метода `set()` нет. Запись идёт напрямую через `UserData` (доступно внутри пакета `crazy.module.german.core`) с последующим вызовом `SaveToFile()`.
+> ⚠️ Публичного метода `set()` нет. Запись идёт напрямую через `UserData` (доступно внутри пакета `su.crazy74.sparky.core`) с последующим вызовом `SaveToFile()`.
 
 #### Системные ключи (`SystemData`, только чтение)
 
@@ -270,12 +270,12 @@ AppConfig.get("some/path")
 * `public static BackupManager inProject(Project project)`: Фабричный метод, принимающий базовый `Project`.
 
 #### Методы
-* `public FileObject getFolder()`: Возвращает или создает целевую директорию для хранения резервных копий (`<project_root>/.german/.backup/`). Возвращает `null`, если проект недоступен.
+* `public FileObject getFolder()`: Возвращает или создает целевую директорию для хранения резервных копий (`<project_root>/.sparky/.backup/`). Возвращает `null`, если проект недоступен.
 * `public void Backup(FileObject sourceFile)`: Запускает процесс резервного копирования для указанного файла:
     1. Вычисляет относительный путь файла от корня проекта с помощью `FileUtil.getRelativePath`.
     2. Зеркально воссоздает структуру родительских папок внутри `.backup/` через `FileUtil.createFolder`.
     3. Генерирует уникальное имя файла с временной меткой в формате `yyyy-MM-dd_HH-mm-ss` (например, `Main.java.2026-05-22_18-35-02.bak`).
-    4. Выполняет атомарное копирование средствами NetBeans FileSystem API и логирует результат в «German Console».
+    4. Выполняет атомарное копирование средствами NetBeans FileSystem API и логирует результат в «Sparky Console».
 
 ---
 
@@ -312,7 +312,7 @@ AppConfig.get("some/path")
 
 ---
 
-## 📦 `crazy.module.german.ai`
+## 📦 `su.crazy74.sparky.ai`
 
 ### `aiModelHandler`
 Класс-диспетчер для управления конфигурацией моделей ИИ и провайдеров в рамках текущей сессии.
@@ -340,12 +340,21 @@ AppConfig.get("some/path")
 
 ---
 
-## 📦 `crazy.module.german.ui`
+## 📦 `su.crazy74.sparky.ui`
+
+### `JavaFxWindow`
+Базовый абстрактный компонент для окон NetBeans (`TopComponent`), содержащих встроенный браузер JavaFX `WebView` (`JFXPanel`). Отвечает за безопасную многопоточную инициализацию JavaFX, загрузку HTML-шаблона и связывание JS-моста.
+* `public String getGUID()`: Возвращает уникальный идентификатор (GUID) текущего окна.
+* `public i_GermanProject getProject()`: Возвращает объект проекта, привязанного к окну.
+* `protected void initFxContainer(i_GermanProject project)`: Инициализирует контейнеры Swing и JavaFX с корректным переключением потоков диспетчеризации.
+* `abstract protected void loadContent()`: Загрузка целевого HTML-шаблона в `WebEngine`.
+* `abstract protected void bindBridge(WebEngine engine)`: Привязка JS-моста к объекту `window` браузера.
+* `protected void onPageLoaded(WebEngine engine)`: Оповещение веб-приложения об успешной загрузке страницы (`$(document).trigger('startWork')`).
+
+---
 
 ### `ChatTopComponent`
-Основное окно взаимодействия (Чат). Хостит `WebView`. Содержит две внутренние реализации:
-* `public String getGUID()`: Возвращает уникальный идентификатор (GUID) текущего окна чата.
-* `public i_GermanProject getProject()`: Возвращает объект проекта, привязанного к окну чата.
+Основное окно взаимодействия (Чат). Наследует `JavaFxWindow`, хостит `WebView` с интерфейсом чата (`chat.html`). Включает две внутренние реализации:
 
 #### `ChatSession`
 Реализует интерфейс `i_Session`. Управляет жизненным циклом сессии, хранит историю сообщений и координирует обновление UI.
@@ -379,10 +388,8 @@ AppConfig.get("some/path")
 * `public void copyToClipboard(String text)`: Копирует переданный текст в системный буфер обмена.
 * `public String getModelsList()`: Возвращает JSON-список доступных моделей ИИ.
 
-### `ProjectTopComponent` 
-Интерактивное окно отображения ментальной карты и настроек проекта. Хостит `WebView` с `project.html`.
-* `public String getGUID()`: Возвращает уникальный идентификатор (GUID) текущего окна проекта.
-* `public i_GermanProject getProject()`: Возвращает объект проекта, привязанного к окну.
+### `ProjectTopComponent`
+Интерактивное окно отображения ментальной карты и настроек проекта. Наследует `JavaFxWindow`, хостит `WebView` с `project.html`.
 
 #### `ProjectJSBridge` 
 Класс-мост для взаимодействия JavaScript (WebView ментальной карты) с Java-бэкендом плагина.

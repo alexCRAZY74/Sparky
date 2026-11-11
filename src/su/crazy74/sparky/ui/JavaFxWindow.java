@@ -29,23 +29,35 @@ abstract public class JavaFxWindow extends TopComponent {
 	protected void initFxContainer(i_GermanProject project) {
 		this.project = project;
 		AppHandler.toConsole("initFxContainer");
-		javax.swing.SwingUtilities.invokeLater(() -> {
+		new Thread(() -> {
+			ClassLoader oldLoader = Thread.currentThread().getContextClassLoader();
 			try {
-				initSwingContainer();
-				Platform.runLater(this::initFXContent);
+				Thread.currentThread().setContextClassLoader(JFXPanel.class.getClassLoader());
+				Platform.setImplicitExit(false);
+				try {
+					Platform.startup(() -> {});
+				} catch (IllegalStateException e) {
+					// Платформа уже запущена — игнорируем
+				}
+				javax.swing.SwingUtilities.invokeLater(() -> {
+					try {
+						initSwingContainer();
+						Platform.runLater(this::initFXContent);
+					} catch (Throwable t) {
+						AppHandler.toConsole("initFxContainer error: " + t.getMessage());
+						t.printStackTrace();
+					}
+				});
 			} catch (Throwable t) {
-				String err = "initFxContainer error: " + t.getMessage();
-				AppHandler.toConsole(err);
+				AppHandler.toConsole("FX Startup error: " + t.getMessage());
 				t.printStackTrace();
 			} finally {
-        AppHandler.toConsole("initFxContainer success");
-      }
-		});
+				Thread.currentThread().setContextClassLoader(oldLoader);
+			}
+		}).start();
 	}
 
 	private void initSwingContainer() {
-		ClassLoader oldLoader = Thread.currentThread().getContextClassLoader();
-		Thread.currentThread().setContextClassLoader(JFXPanel.class.getClassLoader());
 		AppHandler.toConsole("initSwingContainer");
 		try {
 			webContent = new JFXPanel();
@@ -54,11 +66,9 @@ abstract public class JavaFxWindow extends TopComponent {
 			revalidate();
 			repaint();
 		} catch (Throwable t) {
-			String err = "initSwingContainer ERROR: " + t.getMessage();
-			AppHandler.toConsole(err);
+			AppHandler.toConsole("initSwingContainer ERROR: " + t.getMessage());
 			t.printStackTrace();
 		} finally {
-			Thread.currentThread().setContextClassLoader(oldLoader);
 			AppHandler.toConsole("initSwingContainer success");
 		}
 	}
