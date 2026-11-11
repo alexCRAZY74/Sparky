@@ -28,7 +28,7 @@ import org.netbeans.api.project.ui.OpenProjects;
 )
 @TopComponent.Description(
 				preferredID = "ProjectTopComponent",
-				iconBase = "crazy/module/german/icons/06-wallet-icon24x24.png",
+				iconBase = "su/crazy74/sparky/icons/06-wallet-icon24x24.png",
 				persistenceType = TopComponent.PERSISTENCE_NEVER
 )
 @TopComponent.Registration(mode = "editor", openAtStartup = false)

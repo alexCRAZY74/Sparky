@@ -16,7 +16,7 @@ import org.openide.util.lookup.Lookups;
 
 public class NodeProject extends AbstractNode {
 
-	private static final String ICON_PATH = "crazy/module/german/icons/06-wallet-icon16x16.png";
+	private static final String ICON_PATH = "su/crazy74/sparky/icons/06-wallet-icon16x16.png";
 	private final i_GermanProject project;
 
 	public NodeProject(i_GermanProject project) {

@@ -22,7 +22,7 @@ import org.openide.util.NbBundle.Messages;
 )
 @ActionRegistration(
 				displayName = "#CTL_NewChatAction",
-				//iconBase = "crazy/module/german/icons/bubble16x16.png",
+				//iconBase = "su/crazy74/sparky/icons/bubble16x16.png",
 				lazy = false // Нам нужен false, чтобы NetBeans дергал createContextAwareInstance
 )
 @ActionReferences({
@@ -38,7 +38,7 @@ public final class NewChatAction extends AbstractAction implements ContextAwareA
 
 	public NewChatAction() {
 		super(LanguageHandler.getDefault().getStr("menu/new_chat", "New AI-Chat"));
-		putValue(Action.SMALL_ICON, org.openide.util.ImageUtilities.loadImageIcon("crazy/module/german/icons/bubble16x16.png", true));
+		putValue(Action.SMALL_ICON, org.openide.util.ImageUtilities.loadImageIcon("su/crazy74/sparky/icons/bubble16x16.png", true));
 	}
 
 	@Override
@@ -65,9 +65,9 @@ public final class NewChatAction extends AbstractAction implements ContextAwareA
 
 		public DelegateAction(Lookup context) {
 			super(LanguageHandler.getDefault().getStr("menu/new_chat", "New AI-Chat"));
-			putValue(Action.SMALL_ICON, org.openide.util.ImageUtilities.loadImageIcon("crazy/module/german/icons/bubble16x16.png", true));
+			putValue(Action.SMALL_ICON, org.openide.util.ImageUtilities.loadImageIcon("su/crazy74/sparky/icons/bubble16x16.png", true));
 			this.context = context;
-			putValue("iconBase", "crazy/module/german/icons/bubble16x16.png");
+			putValue("iconBase", "su/crazy74/sparky/icons/bubble16x16.png");
 		}
 
 		@Override

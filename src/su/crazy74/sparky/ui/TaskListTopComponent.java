@@ -23,7 +23,7 @@ import su.crazy74.sparky.core.ProjectHandler;
 )
 @TopComponent.Description(
 				preferredID = "TaskListTopComponent",
-				iconBase = "crazy/module/german/icons/display24x24.png",
+				iconBase = "su/crazy74/sparky/icons/display24x24.png",
 				persistenceType = TopComponent.PERSISTENCE_ALWAYS
 )
 @TopComponent.Registration(mode = "rightSlidingSide", openAtStartup = false)

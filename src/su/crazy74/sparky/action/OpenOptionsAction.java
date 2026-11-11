@@ -18,7 +18,7 @@ import org.openide.util.NbBundle.Messages;
 @ActionID(category = "Window", id = "su.crazy74.sparky.ui.OpenOptionsAction")
 @ActionRegistration(
     displayName = "#CTL_OpenOptionsAction",
-    iconBase = "crazy/module/german/icons/settings16x16.png",
+    iconBase = "su/crazy74/sparky/icons/settings16x16.png",
     lazy = false
 )
 @ActionReference(path = "Menu/Window/Sparky", position = 2000)
@@ -27,7 +27,7 @@ public final class OpenOptionsAction extends AbstractAction {
 
 	public OpenOptionsAction() {
 		super(LanguageHandler.getDefault().getStr("menu/options", "Config"));
-		putValue(Action.SMALL_ICON, ImageUtilities.loadImageIcon("crazy/module/german/icons/settings16x16.png", true));
+		putValue(Action.SMALL_ICON, ImageUtilities.loadImageIcon("su/crazy74/sparky/icons/settings16x16.png", true));
 	}
 
 	@Override

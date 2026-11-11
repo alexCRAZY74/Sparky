@@ -31,7 +31,7 @@ import java.util.regex.Pattern;
 )
 @TopComponent.Description(
 				preferredID = "ChatTopComponent",
-				iconBase = "crazy/module/german/icons/bubble24x24.png",
+				iconBase = "su/crazy74/sparky/icons/bubble24x24.png",
 				persistenceType = TopComponent.PERSISTENCE_NEVER
 )
 @TopComponent.Registration(mode = "editor", openAtStartup = false)

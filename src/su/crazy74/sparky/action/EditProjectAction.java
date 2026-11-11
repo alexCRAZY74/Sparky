@@ -25,7 +25,7 @@ import org.openide.util.NbBundle;
 )
 @ActionRegistration(
     displayName = "#CTL_EditProjectAction",
-    iconBase = "crazy/module/german/icons/settings16x16.png",
+    iconBase = "su/crazy74/sparky/icons/settings16x16.png",
     lazy = false
 )
 @ActionReferences({
@@ -38,7 +38,7 @@ public final class EditProjectAction extends AbstractAction implements ContextAw
 
     public EditProjectAction() {
         super(LanguageHandler.getDefault().getStr("menu/project_map", "Project Editor"));
-        putValue(Action.SMALL_ICON, ImageUtilities.loadImageIcon("crazy/module/german/icons/settings16x16.png", true));
+        putValue(Action.SMALL_ICON, ImageUtilities.loadImageIcon("su/crazy74/sparky/icons/settings16x16.png", true));
     }
 
     @Override
@@ -87,9 +87,9 @@ public final class EditProjectAction extends AbstractAction implements ContextAw
 
         public DelegateAction(Lookup context) {
             super(LanguageHandler.getDefault().getStr("menu/project_map", "Project Editor"));
-            putValue(Action.SMALL_ICON, ImageUtilities.loadImageIcon("crazy/module/german/icons/settings16x16.png", true));
+            putValue(Action.SMALL_ICON, ImageUtilities.loadImageIcon("su/crazy74/sparky/icons/settings16x16.png", true));
             this.context = context;
-            putValue("iconBase", "crazy/module/german/icons/settings16x16.png");
+            putValue("iconBase", "su/crazy74/sparky/icons/settings16x16.png");
         }
 
         @Override

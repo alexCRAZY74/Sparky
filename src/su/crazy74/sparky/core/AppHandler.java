@@ -78,7 +78,7 @@ public class AppHandler {
 		env.set("lang_data", LanguageHandler.getDefault().getStorage().getRaw());
 		String pluginVersion = "unknown";
     for (org.openide.modules.ModuleInfo info : org.openide.util.Lookup.getDefault().lookupAll(org.openide.modules.ModuleInfo.class)) {
-        if ("org.crazygerman".equals(info.getCodeNameBase())) {
+        if ("su.crazy74.sparky".equals(info.getCodeNameBase())) {
             pluginVersion = info.getSpecificationVersion() != null ? info.getSpecificationVersion().toString() : "1.0";
             break;
         }

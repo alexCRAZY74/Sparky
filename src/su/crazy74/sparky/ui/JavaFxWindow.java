@@ -33,39 +33,40 @@ abstract public class JavaFxWindow extends TopComponent {
 			try {
 				initSwingContainer();
 				Platform.runLater(this::initFXContent);
-				AppHandler.toConsole("initFxContainer success");
 			} catch (Throwable t) {
 				String err = "initFxContainer error: " + t.getMessage();
 				AppHandler.toConsole(err);
 				t.printStackTrace();
-			}
+			} finally {
+        AppHandler.toConsole("initFxContainer success");
+      }
 		});
 	}
 
 	private void initSwingContainer() {
 		ClassLoader oldLoader = Thread.currentThread().getContextClassLoader();
 		Thread.currentThread().setContextClassLoader(JFXPanel.class.getClassLoader());
+		AppHandler.toConsole("initSwingContainer");
 		try {
-			try {
-				Platform.startup(() -> {
-				});
-			} catch (IllegalStateException e) {
-				// Toolkit уже запущен
-			}
-
 			webContent = new JFXPanel();
 			setLayout(new BorderLayout());
 			add(webContent, BorderLayout.CENTER);
 			revalidate();
 			repaint();
+		} catch (Throwable t) {
+			String err = "initSwingContainer ERROR: " + t.getMessage();
+			AppHandler.toConsole(err);
+			t.printStackTrace();
 		} finally {
 			Thread.currentThread().setContextClassLoader(oldLoader);
+			AppHandler.toConsole("initSwingContainer success");
 		}
 	}
 
 	private void initFXContent() {
 		ClassLoader oldLoader = Thread.currentThread().getContextClassLoader();
 		Thread.currentThread().setContextClassLoader(JFXPanel.class.getClassLoader());
+		AppHandler.toConsole("initFXContent");
 		try {
 			Platform.setImplicitExit(false);
 			WebView view = new WebView();
@@ -89,6 +90,7 @@ abstract public class JavaFxWindow extends TopComponent {
 			t.printStackTrace();
 		} finally {
 			Thread.currentThread().setContextClassLoader(oldLoader);
+			AppHandler.toConsole("initFXContent success");
 		}
 	}
 
